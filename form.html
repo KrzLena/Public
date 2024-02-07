@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action = "formscr.php" method = "post" enctype="multipart/form-data"> <!--You can use get-->
+            <fieldset>
+                <legend>Application form</legend>
+                Name:<br>
+                <input type="text" name = "name"><br>
+                Surname:<br>
+                <input type="text" name = "surname"><br>
+                Age:<br>
+                <input type="number" name = "age" min = 1><br>
+                E-mail:<br>
+                <input type="email" name = "mail"><br>
+                <br>
+                <b>Education</b><br>
+                <br>
+                <input type="radio" name="e" value = "P">Primary<br>
+                <input type="radio" name="e" value = "S">Secondary<br>
+                <input type="radio" name="e" value = "H">Higher<br>
+                <br>
+                <p>Choose a language</p>
+                <select name = 'lang[]' size = 5 multiple>
+                    <option value="eng">English</option>
+                    <option value="pol">Polish</option>
+                    <option value="ger">German</option>
+                    <option value="spa">Spanish</option>
+                    <option value="py">Python</option>
+                </select><br>
+
+                <label>Submit file:
+                    <input type = 'hidden' name='max_file_size' value = '1024'>
+                    <input type = 'file' name = 'file1'>
+                </label>
+               
+                <p>Enter a color</p>
+                <input name = "color" list = "color"></input>
+                <datalist id = "color" name = "color">
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </datalist>
+
+                <input type="checkbox" name = "agree">I consent to the processing of my personal data<br>
+                <br>
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button>
+
+            </fieldset>
+        </form>
+    </body>
+</html>
